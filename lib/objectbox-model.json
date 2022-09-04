@@ -1,0 +1,121 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:5579207822205181856",
+      "lastPropertyId": "6:201750906403088243",
+      "name": "Item",
+      "properties": [
+        {
+          "id": "1:6145235229856934728",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6735227733267423387",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:5715921082844703080",
+          "name": "imagePath",
+          "type": 9
+        },
+        {
+          "id": "4:4339438082107152249",
+          "name": "sellPrice",
+          "type": 8
+        },
+        {
+          "id": "5:2167170941662389087",
+          "name": "stockCount",
+          "type": 8
+        },
+        {
+          "id": "6:201750906403088243",
+          "name": "purchasePrice",
+          "type": 8
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:5571389641425688133",
+      "lastPropertyId": "6:3081040262025592383",
+      "name": "OrderItem",
+      "properties": [
+        {
+          "id": "1:1106485920867904354",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3827543437693676987",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:3781407227505553980",
+          "name": "price",
+          "type": 8
+        },
+        {
+          "id": "4:2198699440820769860",
+          "name": "quantity",
+          "type": 6
+        },
+        {
+          "id": "6:3081040262025592383",
+          "name": "invoiceId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:1752748497483983056",
+          "relationTarget": "Invoice"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:4633941991698996735",
+      "lastPropertyId": "2:2609777245441823308",
+      "name": "Invoice",
+      "properties": [
+        {
+          "id": "1:157985422815744311",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2609777245441823308",
+          "name": "name",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "4:4633941991698996735",
+  "lastIndexId": "2:1752748497483983056",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [
+    791558555454944013
+  ],
+  "retiredIndexUids": [
+    7191196008151154841
+  ],
+  "retiredPropertyUids": [
+    7664440600513192647,
+    2851027216462514736,
+    9134444263902509918
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}
