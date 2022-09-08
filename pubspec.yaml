@@ -52,6 +52,8 @@ dependencies:
   flutter_simple_calculator: ^2.2.2
   page_transition: ^2.0.9
   share_plus: ^4.0.10+1
+  path_provider: ^2.0.11
+  emojis: ^0.9.9
 
 
   objectbox: ^1.6.0

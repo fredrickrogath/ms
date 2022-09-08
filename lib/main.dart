@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:ms/services/theme.dart';
 import 'package:provider/provider.dart';
 import 'package:ms/pages/homepage/homepage.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 
-import 'services/theme.dart';
+import 'db/objectbox_interface.dart';
 
-void main() async {
+
+late ObjectBox objectbox;
+
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // objectbox = await ObjectBox.create();
+
+
   // final savedThemeMode = await AdaptiveTheme.getThemeMode();
   SystemChrome.setPreferredOrientations(
     [
@@ -18,7 +26,7 @@ void main() async {
     runApp(MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => DarkMode()),
-        // ChangeNotifierProvider(create: (_) => RotateAnimation()),
+        // ChangeNotifierProvider(create: (_) => ItemProvider()),
       ],
       child: const MyApp(),
     ));
@@ -69,7 +77,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class MyHomePageState extends State<MyHomePage> {
+
   bool wait = false;
+
   void waitForThemeInitialization() {
     // context.read<DarkMode>().getTheme();
     Future.delayed(const Duration(seconds: 1), () {

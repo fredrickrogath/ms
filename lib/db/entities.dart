@@ -9,22 +9,29 @@ class Item {
   String imagePath;
   double sellPrice;
   double stockCount;
+  DateTime createdAt;
+  DateTime updatedAt;
   double purchasePrice;
 
-  Item(
-      {this.id = 0,
-      required this.name,
-      required this.imagePath,
-      required this.purchasePrice,
-      required this.sellPrice,
-      required this.stockCount});
+  Item({
+    this.id = 0,
+    required this.name,
+    required this.imagePath,
+    required this.sellPrice,
+    required this.createdAt,
+    required this.updatedAt,
+    required this.stockCount,
+    required this.purchasePrice,
+  });
 }
 
-//CLASS FOR ORDER MODEL
+//CLASS FOR INVOICE MODEL
 @Entity()
 class Invoice {
   int id;
   String name;
+  DateTime createdAt;
+  DateTime updatedAt;
 
   @Backlink()
   final orderItem = ToMany<OrderItem>();
@@ -32,6 +39,8 @@ class Invoice {
   Invoice({
     this.id = 0,
     required this.name,
+    required this.createdAt,
+    required this.updatedAt,
   });
 }
 

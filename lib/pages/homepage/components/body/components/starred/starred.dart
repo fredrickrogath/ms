@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../sell/components/item_card.dart';
+// import '../sell/components/item_card.dart';
 
 class Starred extends StatelessWidget {
   const Starred({Key? key}) : super(key: key);
@@ -13,9 +13,10 @@ class Starred extends StatelessWidget {
         slivers: <Widget>[
           SliverList(
             delegate: SliverChildBuilderDelegate((context, index) {
-              return ItemCard(
-                index: index,
-              );
+              return const Text('hello');
+              // ItemCard(
+              //   index: index,
+              // );
             }, childCount: 100),
           ),
         ]);
